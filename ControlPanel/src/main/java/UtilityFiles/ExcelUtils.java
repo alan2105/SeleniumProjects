@@ -1,4 +1,4 @@
-package com.beerboard.cp;
+package UtilityFiles;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -11,6 +11,9 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import BaseFiles.TestBase;
+
 import org.apache.poi.xssf.usermodel.XSSFRow;;
 
 
@@ -151,7 +154,7 @@ public void getData() throws IOException
 		
 		
 		ExcelUtils eu = new ExcelUtils();
-		eu.setCellData("TS_005","Result","PASS"); 
+		eu.setCellData("TS_002","Result","PASS"); 
 		
 	}
 	

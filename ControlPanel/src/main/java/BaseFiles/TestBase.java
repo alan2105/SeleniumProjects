@@ -1,4 +1,4 @@
-package com.beerboard.cp;
+package BaseFiles;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -30,7 +30,7 @@ public class TestBase {
 	
 	
 	public WebDriver browserSetup() throws IOException 
-	{
+	{ 
 		
 		String browserName = propfile.getProperty("browser");
 		
@@ -82,7 +82,7 @@ public class TestBase {
 		DateFormat dateformat = new  SimpleDateFormat("dd-MM-yyyy h-m-s");
 		Date currentdate = new Date();
 		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFileToDirectory(src, new File(System.getProperty("user.dir")+"/FailureScreenshots/"+ fileName+"_"+dateformat.format(currentdate)));
+		FileUtils.copyFileToDirectory(src, new File(System.getProperty("user.dir")+"/src/main/java/resources/FailureScreenshots/"+ fileName+"_"+dateformat.format(currentdate)));
 	}
 	
 	public String  getMethodName()
