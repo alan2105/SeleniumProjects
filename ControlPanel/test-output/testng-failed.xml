@@ -5,8 +5,11 @@
     <classes>
       <class name="com.beerboard.cp.LoginpageTest">
         <methods>
+          <include name="teardown"/>
           <include name="getApplicationUrl"/>
-          <include name="VaildLogin"/>
+          <include name="TC_002"/>
+          <include name="TC_003"/>
+          <include name="TC_001"/>
         </methods>
       </class> <!-- com.beerboard.cp.LoginpageTest -->
     </classes>

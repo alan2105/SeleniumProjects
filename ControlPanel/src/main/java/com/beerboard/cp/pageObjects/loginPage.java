@@ -25,6 +25,9 @@ public class loginPage {
 	@FindBy(xpath="//button[@id='btnLogin']")
 	WebElement loginButton;
 	
+	@FindBy(xpath="//div[@class='toast toast-error']")
+	WebElement loginError;
+	
 	public void enterEmailAddress(String emailAddress)
 	{
 		this.username.sendKeys(emailAddress);
@@ -37,5 +40,10 @@ public class loginPage {
 	public void clickOnLoginbutton()
 	{
 		loginButton.click();
+	}
+	
+	public WebElement errorToaster()
+	{
+		return loginError;
 	}
 }

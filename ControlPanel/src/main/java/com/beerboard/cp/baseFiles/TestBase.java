@@ -31,7 +31,7 @@ public class TestBase {
 	
 	
 	
-	public WebDriver browserSetup() throws IOException 
+	public WebDriver browserSetup() throws IOException
 	{ 
 		
 		String browserName = propfile.getProperty("browser");
@@ -48,7 +48,7 @@ public class TestBase {
 		}
 		else if (browserName.equalsIgnoreCase("ie")) 
 		{
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/drivers/IEDriverServer.exe");
+			System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"/drivers/IEDriverServer.exe");
 			driver = new InternetExplorerDriver();
 		}
 		driver.manage().window().maximize();
