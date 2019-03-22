@@ -33,7 +33,7 @@ public class ExcelUtils {
 	void loadExcelfile(String excelFileName, String sheetName) throws IOException
 	{
 		
-		fis = new FileInputStream (System.getProperty("user.dir")+ "\\src\\main\\java\\com\\beerboard\\cp\\resources\\"+ excelFileName);
+		fis = new FileInputStream (System.getProperty("user.dir")+ "/src/main/java/resources/"+ excelFileName);
 		try {
 			wb = new XSSFWorkbook(fis);
 		} catch (IOException e) {
@@ -99,7 +99,7 @@ public void setCellData(String TCRow,String RSColumn,String Value) throws IOExce
 			}
 			
 			
-		}
+		} 
 		fis.close();
 		cellvalue = sheets.getRow(rowNum).getCell(colNum);
 		cellvalue.setCellValue(Value);
@@ -112,49 +112,18 @@ public void setCellData(String TCRow,String RSColumn,String Value) throws IOExce
 
 public void getData() throws IOException
 {
-	loadExcelfile("TestCases1.xlsx","Test");
-	rows = sheets.iterator();
-	headerRow = sheets.getRow(10);
-	 cells = headerRow.cellIterator(); 
-	int k =10; 
-	int colNum = 0;
-	int rowNum = 0;
 	
-	while (cells.hasNext())
-	{
-		cellvalue = cells.next();
-		if(cellvalue.getStringCellValue().equalsIgnoreCase("TestCase_ID"))
-				{
-			
-			colNum= cellvalue.getColumnIndex();
-			rows.next();
-			while(rows.hasNext())
-			{ 
-			
-				row = rows.next();
-				
-				if(row.getCell(colNum).getStringCellValue().equalsIgnoreCase("TS_003"))
-				{
-					
-					rowNum = k;				
-				}
-				k++;
-			}
-			
-			System.out.println(rowNum);
-		
-				}
-		
-			}
+}
 	
 	
-} 
+
+
 
 	public static void main(String[] args) throws IOException {
 		
 		
 		ExcelUtils eu = new ExcelUtils();
-		eu.setCellData("TS_002","Result","PASS"); 
+		eu.getData();
 		
 	}
 	

@@ -78,7 +78,7 @@ public class TestBase {
 		propfile.load(fis); 
 		
 		
-		return filePath; 
+		return filePath;
 	}
 	
 	public void getFailureScreenshot(String fileName) throws IOException
