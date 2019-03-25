@@ -113,7 +113,30 @@ public void setCellData(String TCRow,String RSColumn,String Value) throws IOExce
 public void getData() throws IOException
 {
 	
+	
+	loadExcelfile("TestData1.xlsx","TestData");
+	
+	rows= sheets.iterator();
+	while(rows.hasNext())
+	{
+		row = rows.next();
+		cells = row.cellIterator();
+		while(cells.hasNext())
+		{
+			cellvalue = cells.next();
+			if(row.getRowNum()>=1)
+			{
+				if(cellvalue.getColumnIndex()==2)
+				{
+					System.out.print(cellvalue.getStringCellValue()+"\n");
+				}
+			}
+		}
+	}
+	
+	
 }
+
 	
 	
 
@@ -126,7 +149,8 @@ public void getData() throws IOException
 		eu.getData();
 		
 	}
+
 	
-	}
+}	
 		
 		
