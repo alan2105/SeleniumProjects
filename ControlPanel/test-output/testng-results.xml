@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="12343" started-at="2019-03-21T13:20:40Z" finished-at="2019-03-21T13:20:53Z">
+  <suite name="Default suite" duration-ms="17586" started-at="2019-03-26T13:14:49Z" finished-at="2019-03-26T13:15:07Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="12343" started-at="2019-03-21T13:20:40Z" finished-at="2019-03-21T13:20:53Z">
+    <test name="Default test" duration-ms="17586" started-at="2019-03-26T13:14:49Z" finished-at="2019-03-26T13:15:07Z">
       <class name="com.beerboard.cp.LoginpageTest">
-        <test-method status="PASS" signature="getApplicationUrl()[pri:0, instance:com.beerboard.cp.LoginpageTest@1ce92674]" name="getApplicationUrl" is-config="true" duration-ms="5307" started-at="2019-03-21T18:50:40Z" finished-at="2019-03-21T18:50:46Z">
+        <test-method status="PASS" signature="getApplicationUrl()[pri:0, instance:com.beerboard.cp.LoginpageTest@1ce92674]" name="getApplicationUrl" is-config="true" duration-ms="9998" started-at="2019-03-26T18:44:49Z" finished-at="2019-03-26T18:44:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getApplicationUrl -->
-        <test-method status="PASS" signature="TC_001()[pri:0, instance:com.beerboard.cp.LoginpageTest@1ce92674]" name="TC_001" duration-ms="4887" started-at="2019-03-21T18:50:46Z" description="Login with Valid credentials" finished-at="2019-03-21T18:50:50Z">
+        <test-method status="PASS" signature="TC_001()[pri:0, instance:com.beerboard.cp.LoginpageTest@1ce92674]" name="TC_001" duration-ms="5325" started-at="2019-03-26T18:44:59Z" description="Login with Valid credentials" finished-at="2019-03-26T18:45:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_001 -->
-        <test-method status="PASS" signature="TC_002()[pri:0, instance:com.beerboard.cp.LoginpageTest@1ce92674]" name="TC_002" duration-ms="277" started-at="2019-03-21T18:50:50Z" description="Logged out" finished-at="2019-03-21T18:50:51Z">
+        <test-method status="PASS" signature="TC_002()[pri:0, instance:com.beerboard.cp.LoginpageTest@1ce92674]" name="TC_002" duration-ms="245" started-at="2019-03-26T18:45:04Z" description="Logged out" finished-at="2019-03-26T18:45:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_002 -->
-        <test-method status="PASS" signature="TC_003()[pri:0, instance:com.beerboard.cp.LoginpageTest@1ce92674]" name="TC_003" duration-ms="1237" started-at="2019-03-21T18:50:51Z" description="Login with Invalid credentials" finished-at="2019-03-21T18:50:52Z">
+        <test-method status="PASS" signature="TC_003()[pri:0, instance:com.beerboard.cp.LoginpageTest@1ce92674]" name="TC_003" duration-ms="1274" started-at="2019-03-26T18:45:05Z" description="Login with Invalid credentials" finished-at="2019-03-26T18:45:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_003 -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.beerboard.cp.LoginpageTest@1ce92674]" name="teardown" is-config="true" duration-ms="611" started-at="2019-03-21T18:50:52Z" finished-at="2019-03-21T18:50:53Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.beerboard.cp.LoginpageTest@1ce92674]" name="teardown" is-config="true" duration-ms="708" started-at="2019-03-26T18:45:06Z" finished-at="2019-03-26T18:45:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
