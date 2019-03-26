@@ -110,13 +110,26 @@ public void setCellData(String TCRow,String RSColumn,String Value) throws IOExce
 
 	}
 
-public void getData() throws IOException
+
+public void getData(String colName ,int rowIndex) throws IOException
 {
-	
+	int colIndex = 0;
 	
 	loadExcelfile("TestData1.xlsx","TestData");
-	
+	//Find a column name
+	headerRow = sheets.getRow(0);
+	cells= headerRow.cellIterator();
 	rows= sheets.iterator();
+	
+	while(cells.hasNext()) {
+		cellvalue = cells.next();
+		if(cellvalue.getStringCellValue().equalsIgnoreCase(colName))
+		{
+			colIndex=cellvalue.getColumnIndex();
+		}	
+	}
+	
+	
 	while(rows.hasNext())
 	{
 		row = rows.next();
@@ -124,11 +137,11 @@ public void getData() throws IOException
 		while(cells.hasNext())
 		{
 			cellvalue = cells.next();
-			if(row.getRowNum()>=1)
+			if(row.getRowNum()>rowIndex)
 			{
-				if(cellvalue.getColumnIndex()==2)
+				if(cellvalue.getColumnIndex()== colIndex)
 				{
-					System.out.print(cellvalue.getStringCellValue()+"\n");
+				System.out.print(cellvalue.getStringCellValue() + "\n");
 				}
 			}
 		}
@@ -137,16 +150,12 @@ public void getData() throws IOException
 	
 }
 
-	
-	
-
-
 
 	public static void main(String[] args) throws IOException {
 		
 		
 		ExcelUtils eu = new ExcelUtils();
-		eu.getData();
+		eu.getData("Data3", 0);
 		
 	}
 
