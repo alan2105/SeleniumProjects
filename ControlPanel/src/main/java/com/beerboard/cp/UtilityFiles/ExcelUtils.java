@@ -1,8 +1,6 @@
 package com.beerboard.cp.UtilityFiles;
 
-import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Iterator;
@@ -10,12 +8,7 @@ import java.util.Iterator;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-
-
-
-import org.apache.poi.xssf.usermodel.XSSFRow;;
-
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;;
 
 public class ExcelUtils {
 	
@@ -33,7 +26,7 @@ public class ExcelUtils {
 	void loadExcelfile(String excelFileName, String sheetName) throws IOException
 	{
 		
-		fis = new FileInputStream (System.getProperty("user.dir")+ "/src/main/java/resources/"+ excelFileName);
+		fis = new FileInputStream (System.getProperty("user.dir")+ "/resources/"+ excelFileName);
 		try {
 			wb = new XSSFWorkbook(fis);
 		} catch (IOException e) {
@@ -103,7 +96,7 @@ public void setCellData(String TCRow,String RSColumn,String Value) throws IOExce
 		fis.close();
 		cellvalue = sheets.getRow(rowNum).getCell(colNum);
 		cellvalue.setCellValue(Value);
-		fos = new FileOutputStream(System.getProperty("user.dir")+ "/src/main/java/resources/TestCases1.xlsx");
+		fos = new FileOutputStream(System.getProperty("user.dir")+ "/resources/TestCases1.xlsx");
 		wb.write(fos);
 		fos.close();
 		System.out.println(colNum);
@@ -155,7 +148,8 @@ public void getData(String colName ,int rowIndex) throws IOException
 		
 		
 		ExcelUtils eu = new ExcelUtils();
-		eu.getData("Data3", 0);
+		//eu.getData("Data3", 0);
+		eu.setCellData("TC_001", "Result", "FAIL");
 		
 	}
 

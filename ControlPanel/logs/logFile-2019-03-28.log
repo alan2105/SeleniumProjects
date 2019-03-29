@@ -1,0 +1,11 @@
+18:09:51.560 [main] DEBUG com.beerboard.cp.LoginpageTest - Clicking Login button
+18:09:55.717 [main] INFO  com.beerboard.cp.LoginpageTest - Logged in Successfully and the current URL is:http://cp.stg.beerboard.com/dashboard
+18:09:57.519 [main] INFO  com.beerboard.cp.LoginpageTest - Error Message Status:true
+18:09:58.118 [main] DEBUG com.beerboard.cp.baseFiles.TestBase - Browser is closed
+18:13:12.401 [main] DEBUG com.beerboard.cp.baseFiles.TestBase - Driver is intialized
+18:13:13.770 [main] DEBUG com.beerboard.cp.baseFiles.TestBase - URL is passed
+18:13:13.770 [main] INFO  com.beerboard.cp.baseFiles.TestBase - Apllication URL is loaded
+18:13:14.078 [main] DEBUG com.beerboard.cp.LoginpageTest - Valid credentials are typed
+18:13:14.155 [main] DEBUG com.beerboard.cp.LoginpageTest - Clicking Login button
+18:13:18.876 [main] INFO  com.beerboard.cp.LoginpageTest - Logged in Successfully and the current URL is:http://cp.stg.beerboard.com/dashboard
+18:13:20.301 [main] INFO  com.beerboard.cp.LoginpageTest - Error Message Status:true

@@ -7,6 +7,16 @@
   <version>1.0-SNAPSHOT</version>
   <name>ControlPanel</name>
   <url>http://maven.apache.org</url>
+  
+  <build>
+  <resources>
+      <resource>
+        <directory>/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
+    
+  </build>
   <dependencies>
   <dependency>
     <groupId>org.apache.maven.plugins</groupId>
@@ -26,7 +36,16 @@
     <version>6.10</version>
     
 </dependency>
-
+<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-core</artifactId>
+    <version>2.11.2</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-api</artifactId>
+    <version>2.11.2</version>
+</dependency>
 <dependency>
     <groupId>io.github.bonigarcia</groupId>
     <artifactId>webdrivermanager</artifactId>
@@ -44,11 +63,5 @@
     <artifactId>poi-ooxml</artifactId>
     <version>4.0.1</version>
 </dependency>
- <dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>1.2.17</version>
-		</dependency>
-
    </dependencies>
 </project>
