@@ -108,7 +108,7 @@ public void getData(String colName ,int rowIndex) throws IOException
 {
 	int colIndex = 0;
 	
-	loadExcelfile("TestData1.xlsx","TestData");
+	loadExcelfile("TestCases1.xlsx","Test");
 	//Find a column name
 	headerRow = sheets.getRow(0);
 	cells= headerRow.cellIterator();
@@ -148,8 +148,8 @@ public void getData(String colName ,int rowIndex) throws IOException
 		
 		
 		ExcelUtils eu = new ExcelUtils();
-		//eu.getData("Data3", 0);
-		eu.setCellData("TC_001", "Result", "FAIL");
+		eu.getData("TestCase_ID", 0);
+		eu.setCellData("TC_003", "Result", "FAIL");
 		
 	}
 
